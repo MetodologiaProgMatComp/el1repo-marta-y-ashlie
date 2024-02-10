@@ -1,6 +1,6 @@
 package es.uah.matcomp.mp.e1.ejerciciosclases;
 
-public class TestMain {
+class CircleTest {
     //Test Constructor and toString()
     public static void main(String[] args) {
         Circle c1 = new Circle(1.1);
@@ -15,5 +15,6 @@ public class TestMain {
         System.out.printf("area is: %.2f%n", c1.getArea());
         System.out.printf("circumference is: %.2f%n", c1.getCircumference());
     }
+
 
 }
