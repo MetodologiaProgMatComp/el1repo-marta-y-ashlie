@@ -1,4 +1,6 @@
-package es.uah.matcomp.mp.e1.ejerciciosclases;
+package es.uah.matcomp.mp.e1.ejerciciosclases.Invoice;
+
+import es.uah.matcomp.mp.e1.ejerciciosclases.Invoice.InvoiceItem;
 
 class InvoiceItemTest {
     public static void main(String[] args) {

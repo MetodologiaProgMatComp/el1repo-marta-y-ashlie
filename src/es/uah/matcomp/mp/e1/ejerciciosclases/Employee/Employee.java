@@ -1,4 +1,4 @@
-package es.uah.matcomp.mp.e1.ejerciciosclases;
+package es.uah.matcomp.mp.e1.ejerciciosclases.Employee;
 
 public class Employee {
     private int id;
@@ -33,7 +33,8 @@ public class Employee {
         salary = newSalary;
     }
     public int raiseSalary( int percent){
-        return salary * (percent/100);
+        int plusSalary = (salary *percent)/100;
+        return salary + plusSalary;
     }
     public String toString(){
         return "Employee[id= " + id + ", name = " + firstName +" " + lastName + ", salary = " + salary + "]";
