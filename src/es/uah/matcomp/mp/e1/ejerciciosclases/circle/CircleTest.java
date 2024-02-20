@@ -1,6 +1,5 @@
 package es.uah.matcomp.mp.e1.ejerciciosclases.circle;
 
-import es.uah.matcomp.mp.e1.ejerciciosclases.circle.Circle;
 
 class CircleTest {
     //Test Constructor and toString()

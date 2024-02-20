@@ -1,6 +1,6 @@
 package es.uah.matcomp.mp.e1.ejerciciosclases.Rectangle;
 
-import es.uah.matcomp.mp.e1.ejerciciosclases.Rectangle.Rectangle;
+
 
 class RectangleTest {
     public static void main(String[] args) {
