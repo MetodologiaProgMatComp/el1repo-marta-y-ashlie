@@ -1,36 +1,34 @@
 package es.uah.matcomp.mp.e1.ejerciciosclases.Practica1;
 
-import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class AccountTest {
 
-    @Test
+    @org.junit.jupiter.api.Test
     void getID() {
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     void getName() {
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     void getBalance() {
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     void credit() {
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     void debit() {
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     void transferTo() {
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     void testToString() {
     }
 }
