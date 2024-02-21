@@ -47,8 +47,7 @@ class AccountTest {
             account.debit(500);
             assertEquals(0, account.getBalance());
         }
-
-        @Test
+        @org.junit.jupiter.api.Test
         public void testDebitExceededBalance() {
             Account account = new Account("123456", "John Doe", 1000);
 
