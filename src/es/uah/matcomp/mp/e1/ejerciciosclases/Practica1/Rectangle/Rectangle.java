@@ -31,7 +31,7 @@ public class Rectangle {
         return (Length * 2) + (Width * 2);
     }
     public String toString(){
-        return "Rectangle [Length= " + Length + "Width = " + Width + "]";
+        return "Rectangle [Length = " + Length + " Width = " + Width + "]";
     }
 
 }

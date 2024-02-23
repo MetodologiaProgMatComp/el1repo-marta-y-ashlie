@@ -1,11 +1,8 @@
-package es.uah.matcomp.mp.e1.ejerciciosclases.Practica1;
+package es.uah.matcomp.mp.e1.ejerciciosclases.Practica1.Circle;
 
-import es.uah.matcomp.mp.e1.ejerciciosclases.Practica1.Circle.Circle;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 class CircleTest {
-
     @org.junit.jupiter.api.Test
     void getRadius() {
     }
@@ -31,7 +28,7 @@ class CircleTest {
     void testToString() {
         double radius = 3.0;
         Circle circle = new Circle(radius);
-        assertEquals("Circle[radius = 3]", circle.toString());
+        assertEquals("Circle[radius = 3.0]", circle.toString());
     }
 
     @org.junit.jupiter.api.Test
@@ -41,4 +38,5 @@ class CircleTest {
         circle.setRadius(nuevoRadius);
         assertEquals(nuevoRadius, circle.getRadius());
     }
+
 }

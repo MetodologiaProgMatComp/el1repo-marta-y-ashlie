@@ -21,7 +21,7 @@ public class Circle {
         return 2*Math.PI*radius;
     }
     public String toString() {
-        return "Circle[radius= " + radius + "]";
+        return "Circle[radius = " + radius + "]";
     }
     public void setRadius(double newRadius){
         radius = newRadius;

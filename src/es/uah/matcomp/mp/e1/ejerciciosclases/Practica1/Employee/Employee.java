@@ -37,7 +37,7 @@ public class Employee {
         return salary + plusSalary;
     }
     public String toString(){
-        return "Employee[id= " + id + ", name = " + firstName +" " + lastName + ", salary = " + salary + "]";
+        return "Employee[id = " + id + ", name = " + firstName +" " + lastName + ", salary = " + salary + "]";
     }
 
 
