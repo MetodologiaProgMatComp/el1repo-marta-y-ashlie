@@ -29,8 +29,9 @@ class AccountTest {
 
         assertEquals(0, account.getBalance());
 
-        account.credit(500);
-        assertEquals(500, account.getBalance());
+        int amount = 500;
+        int NuevoBalance = account.credit(amount);
+        assertEquals(NuevoBalance, account.getBalance());
 
         account.credit(500);
         assertEquals(1000, account.getBalance());
@@ -53,9 +54,8 @@ class AccountTest {
         //Sin suficiente balance
         Account Marta = new Account("234","Marta");
         int amount2 = 100;
-        int Balance2 = Marta.debit(amount2);
 
-        assertEquals(0, Balance2); //Debería de quedarse en 0
+        assertEquals(0, Marta.debit(amount2)); //Debería de quedarse en 0
         assertEquals(0, Marta.getBalance()); //Es igual; debe de mantenerse en 0
     }
 
