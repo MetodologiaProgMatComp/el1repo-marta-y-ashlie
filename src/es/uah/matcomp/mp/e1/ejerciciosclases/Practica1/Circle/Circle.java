@@ -1,4 +1,4 @@
-package es.uah.matcomp.mp.e1.ejerciciosclases.Practica1;
+package es.uah.matcomp.mp.e1.ejerciciosclases.Practica1.Circle;
 /**
  * La clase Circle moldea un circulo con un radio
  */

@@ -1,5 +1,6 @@
 package es.uah.matcomp.mp.e1.ejerciciosclases.Practica1;
 
+import es.uah.matcomp.mp.e1.ejerciciosclases.Practica1.Date.Date;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -76,7 +77,9 @@ class DateTest {
         int newMonth = 1;
         int newYear = 2005;
         dat3.setDate(newDay,newMonth,newYear);
-        assertEquals("30/1/2005",dat3);
+        assertEquals(30,dat3.getDay());
+        assertEquals(1,dat3.getMonth());
+        assertEquals(2005,dat3.getYear());
     }
 
     @Test

@@ -1,5 +1,7 @@
 package es.uah.matcomp.mp.e1.ejerciciosclases.Practica1;
 
+import es.uah.matcomp.mp.e1.ejerciciosclases.Practica1.Account.Account;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class AccountTest {
