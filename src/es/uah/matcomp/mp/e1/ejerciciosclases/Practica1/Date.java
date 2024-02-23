@@ -2,53 +2,84 @@ package es.uah.matcomp.mp.e1.ejerciciosclases.Practica1;
 
 public class Date {
     private int day;
-
     private int month;
-
     private int year;
 
-    //Métodos
-
-    public Date(int dia, int mes, int año) {
-        day=dia;
-        month=mes;
-        year=año;
+    public Date(int day, int month, int year) {
+        this.day = day;
+        this.month = month;
+        this.year= year;
     }
 
     public int getDay() {
-        return day;
+        if (day >= 1 && day <= 31) {
+            return day;
+        } else {
+            System.out.println("Dia inválido");
+            return 0;
+        }
     }
 
     public int getMonth() {
-        return month;
+        if(month>= 1 && month<= 12) {
+            return month;
+        } else {
+            System.out.println("Mes invalido");
+            return 0;
+        }
     }
 
     public int getYear() {
-        return year;
-    }
-
-    public void setDay(int day) {
-        if(day>= 1 && day <= 31) {
-            this.day = day;
-        } else {
-            System.out.println("El día introducido no es correcto");
+        if(year>0) {
+            return year;
+        }else{
+            System.out.println("Año invalido");
+            return 0;
         }
     }
 
 
-    public void setMonth(int month) {
-        this.month = month;
+    public void setDay(int day) {
+        if (day >= 1 && day <= 31) {
+            this.day = day;
+        } else {
+            System.out.println("Dia inválido");
+        }
     }
 
     public void setYear(int year) {
-        this.year = year;
+        if(year>0) {
+            this.year = year;
+        }else{
+            System.out.println("Año invalido");
+        }
     }
 
-    public void setDate(int dia, int mes, int año) {
-        day= dia;
-        month= mes;
-        year= año;
+    public void setMonth(int month) {
+        if(month>= 1 && month<= 12) {
+            this.month = month;
+        } else {
+            System.out.println("Mes invalido");}
     }
+
+    public void setDate(int day, int month, int year) {
+        if(day >= 1 && day <= 31) {
+            this.day = day;
+        } else {
+            System.out.println("Dia inválido");
+        }
+        if(month>= 1 && month<= 12) {
+            this.month = month;
+        } else {
+            System.out.println("Mes invalido");}
+        if(year>0) {
+            this.year = year;
+        }else{
+            System.out.println("Año invalido");
+        }
+    }
+
+    @Override
     public String toString() {
         return day + "/" + month + "/" + year;
     }
