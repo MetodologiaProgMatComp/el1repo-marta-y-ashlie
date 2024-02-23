@@ -1,12 +1,10 @@
-package es.uah.matcomp.mp.e1.ejerciciosclases.Practica1;
+package es.uah.matcomp.mp.e1.ejerciciosclases.Practica1.Date;
 
-import es.uah.matcomp.mp.e1.ejerciciosclases.Practica1.Date.Date;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class DateTest {
-
     @Test
     void getDay() {
         Date dat1 = new Date(22,3,2003);
@@ -90,4 +88,5 @@ class DateTest {
 
         assertEquals(esperado,supuesto);
     }
+
 }

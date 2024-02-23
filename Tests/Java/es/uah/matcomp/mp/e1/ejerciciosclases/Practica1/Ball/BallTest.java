@@ -1,12 +1,10 @@
-package es.uah.matcomp.mp.e1.ejerciciosclases.Practica1;
+package es.uah.matcomp.mp.e1.ejerciciosclases.Practica1.Ball;
 
-import es.uah.matcomp.mp.e1.ejerciciosclases.Practica1.Ball.Ball;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class BallTest {
-
     @Test
     void getX() {
         Ball Bola1 = new Ball(3.5F,2,5,3.3F,1.2F);
@@ -113,4 +111,5 @@ class BallTest {
 
         assertEquals(esperado, resuelto);
     }
+
 }

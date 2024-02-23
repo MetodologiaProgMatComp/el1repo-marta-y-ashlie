@@ -1,11 +1,8 @@
-package es.uah.matcomp.mp.e1.ejerciciosclases.Practica1;
-
-import es.uah.matcomp.mp.e1.ejerciciosclases.Practica1.Account.Account;
+package es.uah.matcomp.mp.e1.ejerciciosclases.Practica1.Account;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class AccountTest {
-
     @org.junit.jupiter.api.Test
     void getID() {
         Account Pepe = new Account("223", "Pepe");
@@ -97,4 +94,5 @@ class AccountTest {
 
         assertEquals(expected, actual);
     }
+
 }
