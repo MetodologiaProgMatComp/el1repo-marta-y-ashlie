@@ -1,12 +1,10 @@
-package es.uah.matcomp.mp.e1.ejerciciosclases.Practica2;
+package es.uah.matcomp.mp.e1.ejerciciosclases.Practica2.MyPoint;
 
-import es.uah.matcomp.mp.e1.ejerciciosclases.Practica2.MyPoint.MyPoint;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class MyPointTest {
-
     @Test
     void getX() {
         MyPoint p1 = new MyPoint(3,4);
@@ -92,4 +90,5 @@ class MyPointTest {
         MyPoint p1 = new MyPoint(3,4);
         assertEquals(5,p1.distance());
     }
+
 }
