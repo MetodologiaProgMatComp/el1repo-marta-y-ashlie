@@ -5,6 +5,9 @@ import static org.junit.jupiter.api.Assertions.*;
 class CircleTest {
     @org.junit.jupiter.api.Test
     void getRadius() {
+        double radius = 3.0;
+        Circle circle = new Circle(radius);
+        assertEquals(radius, circle.getRadius());
     }
 
     @org.junit.jupiter.api.Test
