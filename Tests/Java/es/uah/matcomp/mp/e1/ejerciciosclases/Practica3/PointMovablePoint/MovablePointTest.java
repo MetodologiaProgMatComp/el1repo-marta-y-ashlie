@@ -26,10 +26,10 @@ class MovablePointTest {
     }
 
     @Test
-    void setYspeed() {
+    void setYSpeed() {
         MovablePoint p1 = new MovablePoint(1,2);
-        p1.setY(4.4f);
-        assertEquals(4.4f, p1.getY());
+        p1.setYSpeed(4.4f);
+        assertEquals(4.4f, p1.getYSpeed());
     }
 
     @Test
