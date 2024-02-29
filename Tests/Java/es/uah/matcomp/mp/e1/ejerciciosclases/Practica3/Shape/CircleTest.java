@@ -39,7 +39,7 @@ class CircleTest {
     @Test
     void testToString() {
         Circle c1 = new Circle(2,"red", false);
-        String esperado = "Circle[Shape[Color=red,filled=flase],radius=2.0]";
+        String esperado = "Circle[Shape[Color=red,filled=false],radius=2.0]";
         assertEquals(esperado, c1.toString());
     }
 }
