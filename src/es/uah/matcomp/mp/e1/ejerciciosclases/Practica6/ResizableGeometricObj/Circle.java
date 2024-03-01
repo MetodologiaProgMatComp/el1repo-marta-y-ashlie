@@ -1,7 +1,10 @@
 package es.uah.matcomp.mp.e1.ejerciciosclases.Practica6.ResizableGeometricObj;
 
 public class Circle implements GeometricObject{
+    //Variable privada
     protected double radius;
+
+    //Constructor
     public Circle(double radius){
         this.radius = radius;
     }
@@ -11,13 +14,14 @@ public class Circle implements GeometricObject{
         return "Circle[radius=" + radius + "]";
     }
 
+    //Implement methods defined int the interfaz GeometricObject
     @Override
     public double getPerimeter() {
-        return 0;
+        return Math.PI*2*radius;
     }
 
     @Override
     public double getArea() {
-        return 0;
+        return Math.PI*Math.pow(radius,2);
     }
 }

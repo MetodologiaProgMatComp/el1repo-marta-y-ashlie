@@ -16,14 +16,14 @@ class MovablePointTest {
     void moveUp() {
         MovablePoint p1 = new MovablePoint(2,3,4,5);
         p1.moveUp();
-        assertEquals("(2,8) speed=(4,5)", p1.toString());
+        assertEquals("(2,-2) speed=(4,5)", p1.toString());
     }
 
     @Test
     void moveDown() {
         MovablePoint p1 = new MovablePoint(2,3,4,5);
         p1.moveDown();
-        assertEquals("(2,-2) speed=(4,5)", p1.toString());
+        assertEquals("(2,8) speed=(4,5)", p1.toString());
     }
 
     @Test
