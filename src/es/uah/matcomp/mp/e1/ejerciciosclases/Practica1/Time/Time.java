@@ -12,15 +12,40 @@ public class Time {
     }
 
     public int getHour() {
-        return hour;
+        int res;
+
+        if(hour>=0 && hour<=24){
+            res = this.hour;
+            if(this.hour==24)
+                res = 0;
+        }
+        else
+            res = -1;       //hora invalida
+        return res;
     }
 
     public int getMinute() {
-        return minute;
+        int res;
+        if(this.minute>=0 && this.minute<=60){
+            res = this.minute;
+            if(this.minute==60)
+                res = 00;
+        }
+        else
+            res = -1;       //Minuto invalido
+        return res;
     }
 
     public int getSecond() {
-        return second;
+        int res;
+        if(this.second>=0 && this.second<=60) {
+            res = this.second;
+            if(this.second==60)
+                res = 00;
+        }
+        else
+            res = -1;       //Segundo invalido
+        return res;
     }
 
     public void setHour(int hour) {
@@ -40,14 +65,34 @@ public class Time {
         second= segundo;
     }
     public String toString() {
-        return hour +":" + minute + ":" + second;
+        return this.hour +":" + this.minute + ":" + this.second;
     }
     public Time nextSecond() {
-        second ++;
+        if(this.second==59){
+            this.second = 0;
+            if(this.minute == 59){
+                this.minute = 0;
+                if(this.hour == 23){
+                    this.hour = 0;
+                }
+            }
+        } else {
+            this.second ++;}
         return this;
     }
     public Time previousSecond() {
-        second --;
+        if(this.second == 00){
+            this.second = 59;
+            if(this.minute==00){
+                this.minute = 59;
+                if(this.hour == 00){
+                    this.hour = 23;
+                } else
+                    this.hour--;
+            }
+        } else{
+            this.second --;
+        }
         return this;
     }
 }

@@ -10,8 +10,11 @@ class TimeTest {
         Time t1 = new Time(1,2,3);
         assertEquals(1, t1.getHour());
 
-        Time t2 = new Time(24,60,60);
+        Time t2 = new Time(24,23,23);
         assertEquals(0,t2.getHour());
+
+        Time t3 = new Time(33,3,3);
+        assertEquals(-1,t3.getHour());
     }
 
     @Test
@@ -21,6 +24,9 @@ class TimeTest {
 
         Time t2 = new Time(24,60,60);
         assertEquals(0,t2.getMinute());
+
+        Time t3 = new Time(23,61,3);
+        assertEquals(-1,t3.getMinute());
     }
 
     @Test
@@ -30,6 +36,9 @@ class TimeTest {
 
         Time t2 = new Time(24,60,60);
         assertEquals(0,t2.getSecond());
+
+        Time t3 = new Time(3,3,766);
+        assertEquals(-1,t3.getSecond());
     }
 
     @Test
@@ -38,7 +47,7 @@ class TimeTest {
         int nuevaHora = 24;
         Time t1 = new Time(1,2,3);
         t1.setHour(nuevaHora);
-        assertEquals(1,t1.getHour());
+        assertEquals(0,t1.getHour());
         //Valido
         int nuevaHora2 = 13;
         t1.setHour(nuevaHora2);
@@ -47,12 +56,11 @@ class TimeTest {
 
     @Test
     void setMinute() {
-        //Error
         int nuevoMinuto = 60;
         Time t1 = new Time(1,2,3);
         t1.setMinute(nuevoMinuto);
-        assertEquals(2,t1.getMinute());
-        //Valido
+        assertEquals(0,t1.getMinute());
+
         int nuevoMinuto2 = 34;
         t1.setMinute(nuevoMinuto2);
         assertEquals(34,t1.getMinute());
@@ -63,8 +71,8 @@ class TimeTest {
         int nuevoSegundo = 60;
         Time t1 = new Time(1,2,3);
         t1.setSecond(nuevoSegundo);
-        assertEquals(3,t1.getSecond());
-        //Valido
+        assertEquals(0,t1.getSecond());
+
         int nuevoSegundo2 = 34;
         t1.setSecond(nuevoSegundo2);
         assertEquals(34,t1.getSecond());
@@ -81,6 +89,12 @@ class TimeTest {
         assertEquals(2,t4.getHour());
         assertEquals(3,t4.getMinute());
         assertEquals(4,t4.getSecond());
+
+        Time t5 = new Time(1,2,3);
+        t5.setTime(44,333,345);
+        assertEquals(-1,t5.getHour());
+        assertEquals(-1,t5.getMinute());
+        assertEquals(-1,t5.getSecond());
     }
 
     @Test
@@ -99,16 +113,31 @@ class TimeTest {
         int secesp2 = 0;
         assertEquals(secesp,t1.nextSecond().getSecond());
         assertEquals(secesp2,t2.nextSecond().getSecond());
+        assertEquals(00,t2.getHour());
     }
 
     @Test
     void previousSecond() {
         Time t1 = new Time(1,2,3);
-        Time t2 = new Time(0,0,0);
+        Time t2 = new Time(00,00,00);
+        Time t3 = new Time(23,00,00);
         int secesp = 2;
         int secesp2 = 59;
-        assertEquals(secesp,t1.previousSecond().getSecond());
-        assertEquals(secesp2,t2.previousSecond().getSecond());
+        int h1 = 1;
+        int h2 = 23;
+        int h3 = 22;
+
+        t1.previousSecond();
+        assertEquals(secesp, t1.getSecond());
+        assertEquals(h1, t1.getHour());
+
+        t2.previousSecond();
+        assertEquals(secesp2,t2.getSecond());
+        assertEquals(h2,t2.getHour());
+
+        t3.previousSecond();
+        assertEquals(secesp2, t3.getSecond());
+        assertEquals(h3, t3.getHour());
 
     }
 
