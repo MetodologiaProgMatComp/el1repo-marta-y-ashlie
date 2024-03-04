@@ -16,14 +16,14 @@ class MovableCircleTest {
     void moveUp() {
         MovableCircle c1 = new MovableCircle(2,1,2,2,3);
         c1.moveUp();
-        assertEquals("(2,3),speed=(2,2),radius=3", c1.toString());
+        assertEquals("(2,-1),speed=(2,2),radius=3", c1.toString());
     }
 
     @Test
     void moveDown() {
         MovableCircle c1 = new MovableCircle(2,1,2,2,3);
         c1.moveDown();
-        assertEquals("(2,-1),speed=(2,2),radius=3", c1.toString());
+        assertEquals("(2,3),speed=(2,2),radius=3", c1.toString());
 
     }
 
