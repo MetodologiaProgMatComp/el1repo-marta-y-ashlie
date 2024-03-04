@@ -1,4 +1,4 @@
-package es.uah.matcomp.mp.e1.ejerciciosclases.Practica1.Time;
+package es.uah.matcomp.mp.e1.ejerciciosclases.Practica1.Timee;
 
 public class Time {
     private int hour;
