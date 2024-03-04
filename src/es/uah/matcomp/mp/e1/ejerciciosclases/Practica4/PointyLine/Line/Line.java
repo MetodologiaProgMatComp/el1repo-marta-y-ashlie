@@ -12,6 +12,7 @@ public class Line {
         begin = new Point (beginX, beginY);
         end = new Point (endX, endY );
     }
+    @Override
     public String toString(){
         return "Linea[begin = "+begin+" end = "+end+"]";
     }
